@@ -1,0 +1,53 @@
+schema: '2.0'
+stages:
+  download:
+    cmd: python download.py
+    deps:
+    - path: download.py
+      hash: md5
+      md5: 81d98c33d85545b1726811f13a65f66d
+      size: 8775
+    params:
+      params.yaml:
+        params.n_locs: 20
+        params.year: 2021
+  refine:
+    cmd: python refine.py
+    deps:
+    - path: refine.py
+      hash: md5
+      md5: f58c4e4b2edd987844e6129a822e2ada
+      size: 9236
+    params:
+      params.yaml:
+        params.year: 2021
+  process:
+    cmd: python process.py
+    deps:
+    - path: process.py
+      hash: md5
+      md5: e8e42699aa9ce5ea9ea5af49751e484d
+      size: 10092
+    params:
+      params.yaml:
+        params.year: 2021
+  prepare:
+    cmd: python prepare.py
+    deps:
+    - path: prepare.py
+      hash: md5
+      md5: 0457d49290bd41a202c5e2e74ef72e7f
+      size: 10744
+    params:
+      params.yaml:
+        params.year: 2021
+  evaluate:
+    cmd: python evaluate.py
+    deps:
+    - path: evaluate.py
+      hash: md5
+      md5: 9489791b03bf14b124b3397b609dfed9
+      size: 6952
+    params:
+      params.yaml:
+        params.year: 2021

@@ -1,0 +1,32 @@
+stages:
+  download:
+    cmd: python download.py
+    deps:
+    - download.py
+    params:
+    - params.n_locs
+    - params.year
+  refine:
+    cmd: python refine.py
+    deps:
+    - refine.py
+    params:
+    - params.year
+  process:
+    cmd: python process.py
+    deps:
+    - process.py
+    params:
+    - params.year
+  prepare:
+    cmd: python prepare.py
+    deps:
+    - prepare.py
+    params:
+    - params.year
+  evaluate:
+    cmd: python evaluate.py
+    deps:
+    - evaluate.py
+    params:
+    - params.year
