@@ -10,7 +10,7 @@ stages:
     params:
       params.yaml:
         params.n_locs: 20
-        params.year: 2021
+        params.year: 2022
   refine:
     cmd: python refine.py
     deps:
@@ -20,7 +20,7 @@ stages:
       size: 9236
     params:
       params.yaml:
-        params.year: 2021
+        params.year: 2022
   process:
     cmd: python process.py
     deps:
@@ -30,7 +30,7 @@ stages:
       size: 10092
     params:
       params.yaml:
-        params.year: 2021
+        params.year: 2022
   prepare:
     cmd: python prepare.py
     deps:
@@ -40,7 +40,7 @@ stages:
       size: 10744
     params:
       params.yaml:
-        params.year: 2021
+        params.year: 2022
   evaluate:
     cmd: python evaluate.py
     deps:
@@ -50,4 +50,4 @@ stages:
       size: 6952
     params:
       params.yaml:
-        params.year: 2021
+        params.year: 2022
